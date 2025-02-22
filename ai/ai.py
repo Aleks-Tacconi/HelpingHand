@@ -33,4 +33,4 @@ class AI:
             max_tokens=100,
         )
 
-        return response.usage
+        return response.choices[0].message.content
