@@ -8,13 +8,13 @@ class AI:
         api_key = os.getenv("OPENAI_API_KEY")
 
         self.__model = openai.OpenAI(api_key=api_key)
-        self.__image_path = os.path.join("assets", "image.png")
+        self.__image_path = os.path.join("db", "image.png")
 
     def __encode_image(self) -> str:
         with open(file=self.__image_path, mode="rb") as f:
             return base64.b64encode(f.read()).decode("utf-8")
 
-    def prompt(self, prompt: str):
+    def image_prompt(self, prompt: str) -> str | None:
         image = self.__encode_image()
         response = self.__model.chat.completions.create(
             model="gpt-4o-mini-2024-07-18",
@@ -31,6 +31,19 @@ class AI:
                 }
             ],
             max_tokens=100,
+        )
+
+        return response.choices[0].message.content
+
+    def text_prompt(self, prompt: str) -> str | None:
+        response = self.__model.chat.completions.create(
+            model="gpt-4o-mini-2024-07-18",
+            messages=[
+                {
+                    "role": "user",
+                    "content": prompt,
+                }
+            ],
         )
 
         return response.choices[0].message.content

@@ -1,0 +1,213 @@
+
+Birch 
+-------
+
+
+Birch
+
+
+
+
+
+							Tree
+							
+						
+
+
+
+							Tall Tree
+							
+						
+
+
+
+							Sapling
+							
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Biomes
+Birch ForestDark ForestForestOld Growth Birch ForestMeadow
+
+
+Grows on
+DirtGrass BlockCoarse DirtPodzolMycelium
+
+
+Fruit
+None
+
+
+Can generate in existing chunks?
+Yes
+
+
+Consists of
+LogsLeavesMushrooms (fallen trees) ‌[BE  only]Bee Nest
+
+
+
+
+Birch
+-----
+
+
+Biomes
+------
+
+
+Grows on
+--------
+
+
+Fruit
+-----
+
+
+Can generate in existing chunks?
+--------------------------------
+
+
+Consists of
+-----------
+A birch is a tree that appears similar to a common oak in terms of height and leaves, but with light bark and pale wood. It is most commonly found in birch forest biomes. Tall birches are found only in old growth birch forest biomes and cannot be grown with saplings without the use of cheats. As with oaks, a birch tree near flowers can generate with a bee nest attached. A YouTuber named camman18 hates it.
+
+
+Contents
+--------
+
+
+Variants[]
+----------
+There are two types of birch trees:
+Birch trees that are grown from saplings grow to be 5 to 7 blocks tall, while birch trees in the old growth birch forest biome can generate with trunks up to 13 blocks in height.
+
+
+Leaf arrangement[]
+------------------
+All birch trees lack branches. Birch trees always grow around 50 to 60 leaves. The leaf distributions are shown visually above, each table cell representing one 'slice' of the tree viewed from above. The transparent leaves represent areas where leaves may grow, but do not always. The growth pattern, in detail, is as follows:
+Small oak and 1×1 jungle trees also have this arrangement of leaves.
+
+
+Generation[]
+------------
+Regular birch trees generate in forests, birch forests, dark forests and meadow, while tall birch trees only generate in old growth birch forests and rarely in meadow.
+A regular birch near flowers may generate with a bee nest attached.
+
+
+Generation[]
+------------
+The birch tree variants spawn naturally in the indicated biomes:
+
+
+Blocks and items[]
+------------------
+These items can be obtained from birch trees, except that saplings cannot be obtained from tall birch:
+
+
+Planting[]
+----------
+Birch saplings can be planted on:
+Only normal birch trees can be grown from saplings. Tall birch trees generate naturally in the world.
+Birch trees require a 3×3 column of unobstructed space at least 6 blocks above the sapling to grow (7 blocks including the sapling itself). Additionally, birch trees require 5×5 layers without obstruction for the top 3 layers of its final height. No horizontal clearance is needed at the base of the tree (a sapling planted in a hole 1 block deep can still grow).
+A birch tree grown from a sapling and within 2 blocks of a flower has a 5% chance of having a bee nest containing 1–3 bees.
+
+
+Fallen birch trees[]
+--------------------
+ 
+In Bedrock Edition, a fallen birch may consist of a single upright log, or a stump. Logs lying on their side are often found 1–2 blocks from the stump. They occasionally have mushrooms on top.
+A fallen birch tree has a log length of 5–8 blocks. A fallen tall birch has a log length of 5–15 blocks. The stump is never covered in vines.
+
+
+Foliage colors[]
+----------------
+Birch leaves do not follow the foliage color rules that cause the trees to appear in different colors in different biomes. Birch leaves are always the same color regardless of the biome.
+
+
+History[]
+---------
+
+
+Issues[]
+--------
+Issues relating to "Birch" are maintained on the bug tracker. Report issues there.
+
+
+Trivia[]
+--------
+
+
+Gallery[]
+---------
+A fallen birch tree.
+An oak tree loaded after birch and spruce were added.
+An acacia tree that grew through a birch tree.
+A birch and a balloon oak tree sharing a canopy.
+Tall birch trees in a old growth birch forest biome.
+
+
+Odd generation[]
+----------------
+A birch tree that generated on a stone block over a lava pit.
+A birch tree on the sand, caused when the dirt it was on was replaced by sand.
+A fallen birch where most of the logs are higher than the base.
+
+Generated structures, features and terrain features 
+
+
+
+
+
+
+----
+
+
+Explore properties
+------------------
+
+
+Follow Us
+---------
+
+
+Overview
+--------
+
+
+Community
+---------
+
+
+Advertise
+---------
+
+
+Fandom Apps
+-----------
+
+
