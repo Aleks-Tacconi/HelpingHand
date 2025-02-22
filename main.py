@@ -8,6 +8,8 @@ from utils import scrape_url
 
 from utils import read_file
 
+from utils import take_screenshot
+
 IMAGE_PROMPT = """
 Given the image provided
 
@@ -45,7 +47,11 @@ def main() -> None:
 
     while True:
         if keyboard.is_pressed("k"):
-            query(ai)
+            take_screenshot()
+            summary = query(ai)
+
+            if summary != "Error":
+                ...
 
 
 if __name__ == "__main__":
