@@ -1,32 +1,27 @@
-import os
-from playsound3 import playsound
 from elevenlabs import ElevenLabs
+import os
+import tempfile
+from playsound3 import playsound
 
-def generate_response_voice(prompt) -> None:
-    key = os.getenv("ELEVEN_LABS_API_KEY")
+key = os.getenv("ELEVEN_LABS_API_KEY")
+
+def generate_response_voice2(text):
     client = ElevenLabs(api_key=key)
 
-    # Generate speech from the prompt
-    response = client.text_to_speech.convert(
+    audio_stream = client.text_to_speech.convert_as_stream(
         voice_id="bIQlQ61Q7WgbyZAL7IWj",
         output_format="mp3_44100_128",
-        text=prompt,
-        model_id="eleven_multilingual_v2",
+        text=text,
+        model_id="eleven_multilingual_v2"
     )
 
+    audio_bytes = b''.join([chunk for chunk in audio_stream])
 
-    audio_path = os.path.abspath("answer.mp3")
-    with open(audio_path, "wb") as f:
-        f.write(response)
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as temp_file:
+        temp_file.write(audio_bytes)
+        temp_file_path = temp_file.name
 
+    playsound(temp_file_path)
 
-    try:
-        playsound(audio_path)
-    finally:
-        if os.path.exists(audio_path):
-            os.remove(audio_path)
-
-if __name__ == "__main__":
-    generate_response_voice("Hello World, how are you!")
-
+    os.remove(temp_file_path)
 
