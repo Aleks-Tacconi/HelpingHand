@@ -8,7 +8,7 @@ class AI:
         api_key = os.getenv("OPENAI_API_KEY")
 
         self.__model = openai.OpenAI(api_key=api_key)
-        self.__image_path = os.path.join("assets", "image.jpg")
+        self.__image_path = os.path.join("assets", "image.png")
 
     def __encode_image(self) -> str:
         with open(file=self.__image_path, mode="rb") as f:

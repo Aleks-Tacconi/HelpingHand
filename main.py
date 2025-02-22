@@ -1,10 +1,20 @@
 from ai import AI
 
-PROMPT = ""
+PROMPT = """
+Given the image provided
+
+- identify the most central item in the image
+- reply only with the name of the item
+- ignore all other details or description
+"""
+
 
 def main() -> None:
-    ai = AI()
-    print(ai.prompt("Whats in this image?"))
+    # ai = AI()
+    # response = ai.prompt(PROMPT)
+    response = "Birch tree"
+
+    print(response)
 
 
 if __name__ == "__main__":
