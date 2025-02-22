@@ -5,10 +5,10 @@ from ai import AI
 
 from utils import get_wiki_url
 from utils import scrape_url
-
 from utils import read_file
-
+from utils import read_titles
 from utils import take_screenshot
+from utils import find_closest_match
 
 from voice_output import generate_response_voice
 
@@ -25,15 +25,20 @@ Given the following information summarize the most important content
 relevant to a user playing a game into a short paragraph:\n\n
 """
 
+TITLES = read_titles()
+
 
 def query(ai: AI) -> str | None:
-    response = ai.image_prompt(IMAGE_PROMPT)
-    # response = "Birch tree"
+    # response = ai.image_prompt(IMAGE_PROMPT)
+    response = "Birch tree"
 
     if response is None:
         return "Error"
 
-    url = get_wiki_url(response)
+    title = find_closest_match(response.upper(), TITLES)
+    print(title)
+
+    url = get_wiki_url(title)
     content = scrape_url(url)
 
     if content:
