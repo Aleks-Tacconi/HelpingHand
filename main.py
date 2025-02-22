@@ -10,6 +10,8 @@ from utils import read_file
 
 from utils import take_screenshot
 
+from voice_output import generate_response_voice
+
 IMAGE_PROMPT = """
 Given the image provided
 
@@ -51,7 +53,7 @@ def main() -> None:
             summary = query(ai)
 
             if summary != "Error":
-                ...
+                generate_response_voice(summary)
 
 
 if __name__ == "__main__":
