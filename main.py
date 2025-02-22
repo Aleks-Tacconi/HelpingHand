@@ -1,4 +1,5 @@
 import os
+import time
 import keyboard
 
 from ai import AI
@@ -12,7 +13,7 @@ from utils import find_closest_match
 from voice_output import generate_response_voice
 from voice_output2 import generate_response_voice2
 from text_overlay import create_overlay
-import time
+
 IMAGE_PROMPT = """
 Given the image provided
 
@@ -34,8 +35,8 @@ def query(ai: AI) -> str | None:
 
     if response is None:
         return "Error"
-    #title = find_closest_match(response.upper(), TITLES)
-    title = response
+
+    title = find_closest_match(response.lower(), TITLES)
     print(title)
 
     url = get_wiki_url(title)
