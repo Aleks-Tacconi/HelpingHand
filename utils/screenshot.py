@@ -7,7 +7,7 @@ from PIL import ImageGrab
 
 class ScreenShot:
     def __init__(self) -> None:
-        self.PATH = os.path.join("assets", "image.png")
+        self.PATH = os.path.join("..", "db", "image.png")
 
     def take_screenshot(self, region=None):
         if region is None:
@@ -25,14 +25,12 @@ class ScreenShot:
         print("Start point captured, now move your mouse to the end point.")
 
         while True:
-            end_point = pyautogui.position()
 
             if keyboard.is_pressed("p"):
                 print("Selection finished.")
                 break
 
-            if end_point != start_point:
-                break
+        end_point = pyautogui.position()
 
         # Define the region: (left, top, right, bottom)
         left = min(start_point[0], end_point[0])
@@ -45,3 +43,5 @@ class ScreenShot:
         # Take screenshot of the selected region
         self.take_screenshot(region)
 
+screenshot = ScreenShot()
+screenshot.capture_region()
