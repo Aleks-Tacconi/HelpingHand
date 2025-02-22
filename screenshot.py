@@ -1,7 +1,7 @@
 from PIL import ImageGrab
 import os
 
-path = os.path.join('..', 'assets', "image.jpg")
+path = os.path.join("assets", "image.png")
 screenshot = ImageGrab.grab()
-screenshot.save(path, 'JPEG')
+screenshot.save(path, "PNG")
 screenshot.close()
