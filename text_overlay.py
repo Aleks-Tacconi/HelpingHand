@@ -40,4 +40,4 @@ def create_overlay(text="Overlay Text", font_size=40, fg_color="red", x=500, y=3
 
         root.mainloop()
 
-create_overlay("Hello, World!", font_size=50, x=100, y=100)
+

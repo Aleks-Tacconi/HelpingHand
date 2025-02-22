@@ -2,7 +2,7 @@ import os
 import keyboard
 
 from ai import AI
-
+import threading
 from utils import get_wiki_url
 from utils import scrape_url
 from utils import read_file
@@ -11,7 +11,8 @@ from utils import ScreenShot
 from utils import find_closest_match
 from voice_output import generate_response_voice
 from voice_output2 import generate_response_voice2
-
+from text_overlay import create_overlay
+import time
 IMAGE_PROMPT = """
 Given the image provided
 
@@ -28,8 +29,8 @@ relevant to a user playing a game into a short paragraph:\n\n
 TITLES = read_titles()
 
 def query(ai: AI) -> str | None:
-    response = ai.image_prompt(IMAGE_PROMPT)
-    #response = "Birch tree"
+    #response = ai.image_prompt(IMAGE_PROMPT)
+    response = "Birch tree"
 
     if response is None:
         return "Error"
@@ -47,6 +48,12 @@ def query(ai: AI) -> str | None:
         return summary
     return "Error"
 
+def print_sentence_letter_by_letter(sentence, delay=0.1):
+    for letter in sentence:
+        print(letter, end='', flush=True)
+        time.sleep(delay)
+    print()
+
 def main() -> None:
     ai = AI()
     screen = ScreenShot()
@@ -57,6 +64,7 @@ def main() -> None:
 
             if summary != "Error":
                 generate_response_voice2(summary)
+                create_overlay(summary, font_size=12, x=100, y=100)
 
 if __name__ == "__main__":
     main()

@@ -1,215 +1,161 @@
 
-Grass Block 
--------------
+Birch 
+-------
 
 
-Grass Block
-
-
+Birch
 
 
 
 
 
-Renewable
+							Tree
+							
+						
+
+
+
+							Tall Tree
+							
+						
+
+
+
+							Sapling
+							
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Biomes
+Birch ForestDark ForestForestOld Growth Birch ForestMeadow
+
+
+Grows on
+DirtGrass BlockCoarse DirtPodzolMycelium
+
+
+Fruit
+None
+
+
+Can generate in existing chunks?
 Yes
 
 
-Stackable
-Yes (64) 
-
-
-Tool
-
-
-
-Blast resistance
-0.6
-
-
-Hardness
-0.6
-
-
-Luminous
-No 
-
-
-Transparent
-No
-
-
-Flammable
-No
-
-
-Catches fire from lava
-No
+Consists of
+LogsLeavesMushrooms (fallen trees) ‌[BE  only]Bee Nest
 
 
 
 
-A grass block is a natural block that generates abundantly across the surface of the Overworld in most biomes.
+Birch
+-----
 
 
-Grass Block
------------
+Biomes
+------
 
 
-Renewable
----------
-
-
-Stackable
----------
-
-
-Tool
-----
-
-
-Blast resistance
-----------------
-
-
-Hardness
+Grows on
 --------
 
 
-Luminous
---------
+Fruit
+-----
 
 
-Transparent
+Can generate in existing chunks?
+--------------------------------
+
+
+Consists of
 -----------
-
-
-Flammable
----------
-
-
-Catches fire from lava
-----------------------
+A birch is a tree that appears similar to a common oak in terms of height and leaves, but with light bark and pale wood. It is most commonly found in birch forest biomes. Tall birches are found only in old growth birch forest biomes and cannot be grown with saplings without the use of cheats. As with oaks, a birch tree near flowers can generate with a bee nest attached.
 
 
 Contents
 --------
 
 
-Obtaining[]
------------
-A grass block can be obtained by mining it using a tool enchanted with Silk Touch. Otherwise, it drops dirt. It can also be obtained by killing an enderman that is holding a grass block.
+Variants[]
+----------
+There are two types of birch trees:
+Birch trees that are grown from saplings grow to be 5 to 7 blocks tall, while birch trees in the old growth birch forest biome can generate with trunks up to 13 blocks in height.
 
 
-Natural generation[]
+Leaf arrangement[]
+------------------
+All birch trees lack branches. Birch trees always grow around 50 to 60 leaves. The leaf distributions are shown visually above, each table cell representing one 'slice' of the tree viewed from above. The transparent leaves represent areas where leaves may grow, but do not always. The growth pattern, in detail, is as follows:
+Small oak and 1×1 jungle trees also have this arrangement of leaves.
+
+
+Generation[]
+------------
+Regular birch trees generate in forests, birch forests, dark forests and meadow, while tall birch trees only generate in old growth birch forests and rarely in meadow.
+A regular birch near flowers may generate with a bee nest attached.
+
+
+Generation[]
+------------
+The birch tree variants spawn naturally in the indicated biomes:
+
+
+Blocks and items[]
+------------------
+These items can be obtained from birch trees, except that saplings cannot be obtained from tall birch:
+
+
+Planting[]
+----------
+Birch saplings can be planted on:
+Only normal birch trees can be grown from saplings. Tall birch trees generate naturally in the world.
+Birch trees require a 3×3 column of unobstructed space at least 6 blocks above the sapling to grow (7 blocks including the sapling itself). Additionally, birch trees require 5×5 layers without obstruction for the top 3 layers of its final height. No horizontal clearance is needed at the base of the tree (a sapling planted in a hole 1 block deep can still grow).
+A birch tree grown from a sapling and within 2 blocks of a flower has a 5% chance of having a bee nest containing 1–3 bees.
+
+
+Fallen birch trees[]
 --------------------
-Grass blocks generate naturally on the surface of most biomes in the Overworld, and as part of villages and ancient cities.
+ 
+In Bedrock Edition, a fallen birch may consist of a single upright log, or a stump. Logs lying on their side are often found 1–2 blocks from the stump. They occasionally have mushrooms on top.
+A fallen birch tree has a log length of 5–8 blocks. A fallen tall birch has a log length of 5–15 blocks. The stump is never covered in vines.
 
 
-Spread[]
---------
-Grass can spread to nearby dirt blocks, but not coarse dirt or rooted dirt. Grass spreading without player intervention depends heavily on the time of day.‌[Java Edition  only] For a dirt block to accept grass from a nearby grass block, the following requirements must be met:
-When grass is random ticked, it spreads by checking 4 blocks within range and converts any dirt blocks selected into grass.
-Though water and lava are both light-filtering blocks (meaning they decrease skylight by 1 level but do not affect block light), other light-filtering blocks such as ice and slime blocks do not block grass from spreading to the dirt block. Grass blocks can grow under all other transparent blocks like glass, fences, or torches. Grass jumps directly from one block to a neighbor and is not affected by gaps or other blocks being "in the way." Grass blocks spread at random intervals and have an equal chance of spreading to any suitable dirt blocks that are in range. Because grass can spread as much as 3 levels downward, it tends to spread down slopes much faster than it spreads up them.
-
-
-Mob loot[]
-----------
-Endermen can pick up grass blocks, and drop the blocks they are holding if killed, making it the only way to obtain grass blocks without the use of Silk Touch.
-
-
-Appearance[]
-------------
-Plains (left) and forest (right) grass colors.The coloration of grass blocks is dependent on the biome they are in. A grass block always uses the color set to its location, regardless of how it was placed or of its source. This affects the side and top of the block.
-In Bedrock Edition, biome colors also appear on maps.[1]
-
-
-Color[]
--------
-
-
-Item[]
-------
-
-
-Biome colors[]
---------------
-These values are generated by the biome dyeing algorithm. See Biome colors for more information.
-Unused biomes in Bedrock Edition.
-
-
-Usage[]
--------
-Using bone meal on grass blocks causes grass, tall grass, ferns,‌[Bedrock Edition  only] large ferns,‌[Bedrock Edition  only] and flowers to grow.
-Passive mobs tend to wander toward grass blocks. They also wander toward light.
-When a sheep eats a grass block, the block becomes dirt, and a sheared sheep regrows its wool.
-Tilling a grass block with a hoe converts it to a farmland block. 
-Dirt paths can be created by using any type of shovel on the side or top of a grass block with air above it. The shovel loses 1 durability for each dirt path block created.
-
-
-Death[]
--------
-Grass dies and changes to dirt a random time (when a random tick lands on the block) after it has been covered by any opaque blocks. Transparent blocks can kill grass in a similar manner if they cause the light level above the grass block to be four or below (like water does), and the surrounding area is not otherwise sufficiently illuminated.
-
-
-Spawning[]
-----------
-In Java Edition, animals occasionally spawn on grass blocks that have light level 9 or brighter in the space directly above. This is quite rare and requires that there be few other animals nearby or in the spawn chunks. Most animals are instead created along with the terrain.
-In Bedrock Edition, most animals require surface grass blocks (grass blocks with no solid block anywhere above them at the same x, z coordinate) to spawn. Animals regularly spawn in most Overworld biomes on surface grass blocks that have light level 7 or brighter in the space directly above.
-
-
-Snowy Grass Block[]
--------------------
-A snowy grass block with a snow on top of it.Grass blocks turn into a snowy grass block if a snow or a snow block is placed on top of the block. Removing the snow layer will turn the block into a normal grass block.
-
-
-Composting[]
-------------
-Placing grass blocks into a composter has a 30% chance of raising the compost level by 1.‌[Bedrock Edition  only]
-
-
-Sounds[]
---------
-
-
-Generic[]
----------
-Java Edition:
-Bedrock Edition:
-
-
-Unique[]
---------
-Java Edition:
-Bedrock Edition:
-
-
-Data values[]
--------------
-
-
-ID[]
-----
-Java Edition:
-Bedrock Edition:
-
-
-Block states[]
---------------
-Java Edition:
+Foliage colors[]
+----------------
+Birch leaves do not follow the foliage color rules that cause the trees to appear in different colors in different biomes. Birch leaves are always the same color regardless of the biome.
 
 
 History[]
 ---------
 
 
-Data history[]
---------------
-
-
 Issues[]
 --------
-Issues relating to "Grass Block" are maintained on the bug tracker. Report issues there.
+Issues relating to "Birch" are maintained on the bug tracker. Report issues there.
 
 
 Trivia[]
@@ -218,46 +164,20 @@ Trivia[]
 
 Gallery[]
 ---------
-A grass-growing guide made in early 2010.
-An official sticker for the grass block sold by JINX.
-A grass block floating in midair.
+A fallen birch tree.
+An oak tree loaded after birch and spruce were added.
+An acacia tree that grew through a birch tree.
+A birch and a balloon oak tree sharing a canopy.
+Tall birch trees in a old growth birch forest biome.
 
 
-Renders[]
----------
-Grass
-Windswept Savanna
-Mushroom Fields
-Jungle
-Sparse Jungle
-Stony Peaks
-Forest
-Birch Forest
-Plains
-Cherry Grove
-Lush Caves
-Desert
-Ocean
-Meadow
-Dripstone Caves
-Snowy Beach
-Snowy Plains
-Taiga
-Old Growth Pine Taiga
-Windswept Hills
-Badlands
-Swamp
-Swamp (Cold)
-Dark Forest
-
-
-References[]
-------------
-
-
-External Links[]
+Odd generation[]
 ----------------
+A birch tree that generated on a stone block over a lava pit.
+A birch tree on the sand, caused when the dirt it was on was replaced by sand.
+A fallen birch where most of the logs are higher than the base.
 
+Generated structures, features and terrain features 
 
 
 
