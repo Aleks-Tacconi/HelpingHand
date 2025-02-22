@@ -1,6 +1,7 @@
-import pyautogui
 import os
 
+import keyboard
+import pyautogui
 from PIL import ImageGrab
 
 
@@ -9,7 +10,7 @@ class ScreenShot:
         self.PATH = os.path.join("assets", "image.png")
 
     def take_screenshot(self, region=None):
-        if region == None:
+        if region is None:
             screenshot = ImageGrab.grab()
         else:
             screenshot = ImageGrab.grab(bbox=region)
@@ -23,18 +24,24 @@ class ScreenShot:
         start_point = pyautogui.position()
         print("Start point captured, now move your mouse to the end point.")
 
-        # Wait for the user to select the end point
         while True:
             end_point = pyautogui.position()
+
+            if keyboard.is_pressed("p"):
+                print("Selection finished.")
+                break
+
             if end_point != start_point:
                 break
+
         # Define the region: (left, top, right, bottom)
-        left = min(start_point.x, end_point.x)
-        top = min(start_point.y, end_point.y)
-        right = max(start_point.x, end_point.x)
-        bottom = max(start_point.y, end_point.y)
+        left = min(start_point[0], end_point[0])
+        top = min(start_point[1], end_point[1])
+        right = max(start_point[0], end_point[0])
+        bottom = max(start_point[1], end_point[1])
 
         region = (left, top, right, bottom)
 
         # Take screenshot of the selected region
         self.take_screenshot(region)
+
