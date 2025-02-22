@@ -31,7 +31,7 @@ TITLES = read_titles()
 
 def query(ai: AI) -> str | None:
     #response = ai.image_prompt(IMAGE_PROMPT)
-    response = "Birch tree"
+    response = "Red Sand"
 
     if response is None:
         return "Error"

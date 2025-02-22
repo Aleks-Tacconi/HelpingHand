@@ -9,7 +9,7 @@ def read_file(file: str) -> str:
 def read_titles() -> list:
     titles = []
 
-    file = os.path.join("db", "wiki_data", "titles.txt")
+    file = os.path.join("db", "titles.txt")
 
     with open(file=file, mode="r", encoding="utf-8") as f:
         for title in f.readlines():

@@ -7,7 +7,7 @@ from PIL import ImageGrab
 
 class ScreenShot:
     def __init__(self) -> None:
-        self.PATH = os.path.join("..", "db", "image.png")
+        self.PATH = os.path.join("db", "image.png")
 
     def take_screenshot(self, region=None):
         if region is None:
