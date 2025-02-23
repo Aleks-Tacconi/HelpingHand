@@ -25,7 +25,7 @@ Given the image provided
 """
 
 TEXT_PROMPT = """
-Must address me as Pookie.
+Must address me as Pookie. Add some subtle jokes when can (target audience adults).
 Given the following information in a coherent way for a new player in maximum 50 words.
 Give information in this order of importance if applicable (Give in sentence format like as a casual conversation): 
 - Do not give any information related to golden pickaxe unless the item is golden or a gold pickaxe.
@@ -120,7 +120,7 @@ def main() -> None:
             if keyboard.is_pressed(gui.settings_dict["binds"]["Voice Record"]):
                 speach = speak()
                 print(speach)
-                response = ai.text_prompt(speach + "\n\n" + "Give me a simple but concise answer with relevant information, max 50 words. You must call me Pookie and act like you love me. Note: the questions will always be related to minecraft")
+                response = ai.text_prompt(speach + "\n\n" + "Give me a simple but concise answer with relevant information, max 50 words. You must call me Pookie and act like you love me. Note: the questions will always be related to minecraft. Add some subtle jokes when can (target audience adults).")
                 threading.Thread(target=generate_response_voice2, args=(response, everything)).start()
                 print_sentence_letter_by_letter(response, everything)
 
