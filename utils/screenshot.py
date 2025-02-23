@@ -18,24 +18,27 @@ class ScreenShot:
         screenshot.close()
 
     def capture_region(self):
-        print("Select the region to capture by dragging your mouse.")
+        try:
+            print("Select the region to capture by dragging your mouse.")
 
-        start_point = pyautogui.position()
-        print("Start point captured, now move your mouse to the end point.")
+            start_point = pyautogui.position()
+            print("Start point captured, now move your mouse to the end point.")
 
-        while True:
+            while True:
 
-            if keyboard.is_pressed("p"):
-                print("Selection finished.")
-                break
+                if keyboard.is_pressed("p"):
+                    print("Selection finished.")
+                    break
 
-        end_point = pyautogui.position()
+            end_point = pyautogui.position()
 
-        left = min(start_point[0], end_point[0])
-        top = min(start_point[1], end_point[1])
-        right = max(start_point[0], end_point[0])
-        bottom = max(start_point[1], end_point[1])
+            left = min(start_point[0], end_point[0])
+            top = min(start_point[1], end_point[1])
+            right = max(start_point[0], end_point[0])
+            bottom = max(start_point[1], end_point[1])
 
-        region = (left, top, right, bottom)
+            region = (left, top, right, bottom)
 
-        self.take_screenshot(region)
+            self.take_screenshot(region)
+        except:
+            return self.take_screenshot()
