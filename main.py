@@ -14,6 +14,7 @@ from voice_output import generate_response_voice
 from voice_output2 import generate_response_voice2
 from text_overlay import create_overlay
 from utils import load_data
+from text_overlay import root
 
 IMAGE_PROMPT = """
 Given the image provided
@@ -106,6 +107,9 @@ def main() -> None:
                 threading.Thread(target=generate_response_voice2, args=(summary, globals)).start()
                 print_sentence_letter_by_letter(summary, globals)
                 #create_overlay(summary, font_size=12, x=100, y=100)
+
+        root.update()
+        root.update_idletasks()
 
 if __name__ == "__main__":
     main()
