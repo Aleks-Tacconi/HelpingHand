@@ -108,31 +108,33 @@ def main() -> None:
 
 
     while True:
-        if keyboard.is_pressed(","):
-            gui.toggle()
-            gui.update()
-            gui.update_idletasks()
-            time.sleep(1)
+        if gui.timer == 0:
+            if keyboard.is_pressed(","):
+                gui.toggle()
+                gui.update()
+                gui.update_idletasks()
+                time.sleep(1)
 
-        if keyboard.is_pressed(gui.settings_dict["binds"]["Voice Record"]):
-            speach = speak()
-            print(speach)
-            response = ai.text_prompt(speach + "\n\n" + "Give me a simple but concise answer with relevant information, max 30 words.")
-            threading.Thread(target=generate_response_voice2, args=(response, everything)).start()
-            print_sentence_letter_by_letter(response, everything)
+            if keyboard.is_pressed(gui.settings_dict["binds"]["Voice Record"]):
+                speach = speak()
+                print(speach)
+                response = ai.text_prompt(speach + "\n\n" + "Give me a simple but concise answer with relevant information, max 30 words.")
+                threading.Thread(target=generate_response_voice2, args=(response, everything)).start()
+                print_sentence_letter_by_letter(response, everything)
 
-        if keyboard.is_pressed(gui.settings_dict["binds"]["Full Screenshot"]):
-            print("Processing...")
-            screen.take_screenshot()
-            check(ai, everything)
+            if keyboard.is_pressed(gui.settings_dict["binds"]["Full Screenshot"]):
+                print("Processing...")
+                screen.take_screenshot()
+                check(ai, everything)
 
-        if keyboard.is_pressed(gui.settings_dict["binds"]["Area Screenshot"]):
-            print("Processing...")
-            create_overlay("Select the region to capture by dragging your mouse.")
-            screen.capture_region()
-            check(ai, everything)
-
-
+            if keyboard.is_pressed(gui.settings_dict["binds"]["Area Screenshot"]):
+                print("Processing...")
+                create_overlay("Select the region to capture by dragging your mouse.")
+                screen.capture_region()
+                check(ai, everything)
+        else:
+            gui.timer -= 1
+            time.sleep(0.1)
 
         root.update()
         root.update_idletasks()

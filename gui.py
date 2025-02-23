@@ -2,7 +2,8 @@ import tkinter as tk
 import keyboard
 import ctypes
 import json
-
+import time
+import threading
 
 class GUI(tk.Tk):
     def __init__(self, *args, **kwargs):
@@ -23,14 +24,16 @@ class GUI(tk.Tk):
         self.load_settings()
         self.binds_list = []
         self.open = True
+        self.k = None
+        self.timer = 0
 
         scale = 0.0
         for desc, bind in self.settings_dict["binds"].items():
             scale += 0.1
             bind_button = tk.Button(
-                self, text=desc, bg="white", command=lambda x=desc: self.change_bind(x)
+                self, text=desc, bg="black", command=lambda x=desc: self.change_bind(x), fg="white", font=("Arial", 20, "bold")
             )
-            bind_button.place(relx=0.2, rely=0.1+scale, anchor="center")
+            bind_button.place(relx=0.1, rely=0.0+scale, anchor="center", width=350, height=80)
             self.binds_list.append(bind_button)
 
         self.female_voice = tk.Button(
@@ -49,7 +52,7 @@ class GUI(tk.Tk):
             scale = 0.0
             for button in self.binds_list:
                 scale += 0.1
-                button.place(relx=0.2, rely=0.1 + scale, anchor="center")
+                button.place(relx=0.1, rely=0.0 + scale, anchor="center", width=350, height=80)
 
             self.open = True
 
@@ -68,9 +71,36 @@ class GUI(tk.Tk):
         else:
             self.settings_dict = binds
 
-    def change_bind(self, key):
-        print(1)
+    def user_input(self):
         bind = keyboard.read_event()
-        key_str = bind.name
+        self.k = bind
+
+    def change_bind(self, key):
+        for button in self.binds_list:
+            button["state"] = tk.DISABLED
+            button.config(bg="red")
+
+        self.update()
+        self.update_idletasks()
+
+        self.k = None
+        threading.Thread(target=self.user_input).start()
+
+        while self.k is None:
+            self.update()
+            self.update_idletasks()
+
+        self.timer = 2
+
+        key_str = self.k.name
+
         self.settings_dict["binds"][key] = key_str
         self.write_settings()
+        self.toggle()
+
+        for button in self.binds_list:
+            button["state"] = tk.ACTIVE
+            button.config(bg="black")
+
+        self.update()
+        self.update_idletasks()
