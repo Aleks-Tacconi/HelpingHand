@@ -8,7 +8,7 @@ class GUI(tk.Tk):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.attributes("-fullscreen", True, "-transparentcolor", self["bg"])
-        self.config(bg="black")
+        self.overrideredirect(True)
         self.settings_dict = {
             "binds": {
                 "Full Screenshot": "[",
@@ -36,7 +36,7 @@ class GUI(tk.Tk):
         self.male_voice = tk.Button(
             self, command=lambda: self.change_voice("XjdmlV0OFXfXE6Mg2Sb7")
         )
-        self.withdraw()
+
 
     def change_voice(self, voice):
         self.settings_dict["voice"] = voice
