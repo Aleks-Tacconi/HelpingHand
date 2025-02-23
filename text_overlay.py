@@ -1,43 +1,32 @@
 import ctypes
-import os
 from tkinter import Tk, Label
+import time
 
 GWL_EXSTYLE = -20
 WS_EX_LAYERED = 0x00080000
 WS_EX_TRANSPARENT = 0x00000020
 WS_EX_TOPMOST = 0x00000008
 
-def create_overlay(text="Overlay Text", font_size=40, fg_color="red", x=500, y=300):
-    if os.name == 'nt':
-        root = Tk()
-        root.title(text)
-        root.attributes("-topmost", True, "-transparentcolor", root["bg"])
-        root.overrideredirect(True)
-        root.geometry(f"+{x}+{y}")
+root = Tk()
 
-        label = Label(root, text=text, font=("Arial", font_size), fg=fg_color, bg=root["bg"])
-        label.pack()
+x = 1920
+y = 1080
+fg_color = "red"
+font_size = 20
+root.attributes("-topmost", True, "-transparentcolor", root["bg"])
+root.overrideredirect(True)
+root.geometry(f"{x}x{y}+0+850")
 
-        root.update_idletasks()
-        hwnd = ctypes.windll.user32.FindWindowW(None, text)
-        styles = WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOPMOST
-        ctypes.windll.user32.SetWindowLongW(hwnd, GWL_EXSTYLE, styles)
-
-        root.mainloop()
-
-    elif os.name == 'posix':
-        root = Tk()
-        root.title(text)
-        root.attributes("-topmost", True)
-        root.geometry(f"+{x}+{y}")
-        root.configure(bg="black")
-
-        label = Label(root, text=text, font=("Arial", font_size), fg=fg_color, bg="black")
-        label.pack()
-
-        root.update_idletasks()
-        root.attributes("-transparentcolor", "black")
-
-        root.mainloop()
+label = Label(root, text="", font=("Arial", font_size), fg="white", bg=root["bg"])
+label.place(relx=0.5, rely=0.1, anchor="center")
 
 
+def create_overlay(text="Overlay Text"):
+    label.config(text=text)
+    root.update_idletasks()
+    hwnd = ctypes.windll.user32.FindWindowW(None, text)
+    styles = WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOPMOST
+    ctypes.windll.user32.SetWindowLongW(hwnd, GWL_EXSTYLE, styles)
+
+    root.update()
+    root.update_idletasks()

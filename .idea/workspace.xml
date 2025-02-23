@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9e83911-c57e-4509-889a-523a66b917e6" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
+>>>>>>> 7c6259891b16ce808ca467229df314e33f197ebc
       <change beforePath="$PROJECT_DIR$/db/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/db/image.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/info.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/voice_output2.py" beforeDir="false" afterPath="$PROJECT_DIR$/voice_output2.py" afterDir="false" />
+=======
+>>>>>>> 7c6259891b16ce808ca467229df314e33f197ebc
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,16 +41,17 @@
     &quot;assignee&quot;: &quot;christopherwhite06&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Aleks-Tacconi/Hackathon-UniversityOfSussex2025.git&quot;,
-    &quot;accountId&quot;: &quot;baa25688-b6c4-42b8-850c-16683988a4eb&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Aleks-Tacconi/Hackathon-UniversityOfSussex2025",
+    "accountId": "f860b4cc-25ec-4d18-9cae-a38e47ddfa31"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2tOi2en5rGl9fbUtIcZtHjwrLyi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -57,6 +67,7 @@
     &quot;Python.tmp.executor&quot;: &quot;Run&quot;,
     &quot;Python.voice_output.executor&quot;: &quot;Run&quot;,
     &quot;Python.voice_output2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
@@ -106,8 +117,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
-        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-PY-243.24978.54" />
+        <option value="bundled-python-sdk-91e3b7efe1d4-466328ff949b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.24978.54" />
       </set>
     </attachedChunks>
   </component>
@@ -125,14 +136,30 @@
       <workItem from="1740242776992" duration="7848000" />
       <workItem from="1740252637529" duration="398000" />
       <workItem from="1740253053856" duration="10451000" />
+<<<<<<< HEAD
       <workItem from="1740271681109" duration="628000" />
+=======
+      <workItem from="1740268506833" duration="958000" />
+>>>>>>> 7c6259891b16ce808ca467229df314e33f197ebc
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$Image.coverage" NAME="Image Coverage Results" MODIFIED="1740246202057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/PIL" />
     <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$tmp.coverage" NAME="tmp Coverage Results" MODIFIED="1740247614277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$voice_output.coverage" NAME="voice_output Coverage Results" MODIFIED="1740240286749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -142,5 +169,9 @@
     <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1740269344416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$main.coverage" NAME="main Coverage Results" MODIFIED="1740272266965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$screenshot.coverage" NAME="screenshot Coverage Results" MODIFIED="1740248494447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+=======
+    <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$main.coverage" NAME="main Coverage Results" MODIFIED="1740269453839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1740269424269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+>>>>>>> 7c6259891b16ce808ca467229df314e33f197ebc
   </component>
 </project>
