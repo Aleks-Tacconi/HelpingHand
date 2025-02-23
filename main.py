@@ -101,7 +101,7 @@ def main() -> None:
     while True:
 
         keybind = load_keybind()
-        if keyboard.is_pressed(keybind):
+        if keyboard.is_pressed("k"):
             print("Processing...")
             screen.take_screenshot()
             summary = query(ai)
