@@ -7,23 +7,35 @@ import json
 class GUI(tk.Tk):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.attributes("-fullscreen", True)
+        self.attributes("-fullscreen", True, "-transparentcolor", self["bg"])
         self.config(bg="black")
         self.settings_dict = {
-            "binds": {"Full Screenshot": "[", "Area Screenshot": "p", "Voice Record": "v"},
-            "voice": "TOBETOKEN",  # TOKEN TO BE PLACED
+            "binds": {
+                "Full Screenshot": "[",
+                "Area Screenshot": "p",
+                "Voice Record": "v",
+            },
+            "voice": "bIQlQ61Q7WgbyZAL7IWj",
         }
         self.load_settings()
         self.binds_list = []
 
+        scale = 0.0
         for desc, bind in self.settings_dict["binds"].items():
+            scale += 0.1
             bind_info = tk.Label(self, text=desc)
             bind_button = tk.Button(
-                self, text=bind, bg="white", command=lambda x = desc: self.change_bind(x)
+                self, text=bind, bg="white", command=lambda x=desc: self.change_bind(x)
             )
+            bind_info.place(relx=0.1, rely=0.1+scale, anchor="center")
+            bind_button.place(relx=0.2, rely=0.1+scale, anchor="center")
 
-        self.female_voice = tk.Button(self, command=lambda: self.change_voice("bIQlQ61Q7WgbyZAL7IWj"))
-        self.male_voice = tk.Button(self, command=lambda: self.change_voice("XjdmlV0OFXfXE6Mg2Sb7"))
+        self.female_voice = tk.Button(
+            self, command=lambda: self.change_voice("bIQlQ61Q7WgbyZAL7IWj")
+        )
+        self.male_voice = tk.Button(
+            self, command=lambda: self.change_voice("XjdmlV0OFXfXE6Mg2Sb7")
+        )
         self.withdraw()
 
     def change_voice(self, voice):
