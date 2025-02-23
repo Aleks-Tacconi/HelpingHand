@@ -41,12 +41,12 @@
     &quot;assignee&quot;: &quot;christopherwhite06&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Aleks-Tacconi/Hackathon-UniversityOfSussex2025",
-    "accountId": "f860b4cc-25ec-4d18-9cae-a38e47ddfa31"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Aleks-Tacconi/Hackathon-UniversityOfSussex2025&quot;,
+    &quot;accountId&quot;: &quot;f860b4cc-25ec-4d18-9cae-a38e47ddfa31&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -140,7 +140,11 @@
       <workItem from="1740271681109" duration="628000" />
 =======
       <workItem from="1740268506833" duration="958000" />
+<<<<<<< HEAD
 >>>>>>> 7c6259891b16ce808ca467229df314e33f197ebc
+=======
+      <workItem from="1740270625628" duration="1312000" />
+>>>>>>> 279b897e01bfa74855571e8014b9f58a9157b3b7
     </task>
     <servers />
   </component>
@@ -160,6 +164,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$Image.coverage" NAME="Image Coverage Results" MODIFIED="1740246202057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/PIL" />
     <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$tmp.coverage" NAME="tmp Coverage Results" MODIFIED="1740247614277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$voice_output.coverage" NAME="voice_output Coverage Results" MODIFIED="1740240286749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -173,5 +178,16 @@
     <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$main.coverage" NAME="main Coverage Results" MODIFIED="1740269453839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1740269424269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
 >>>>>>> 7c6259891b16ce808ca467229df314e33f197ebc
+=======
+    <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$main.coverage" NAME="main Coverage Results" MODIFIED="1740269761742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$Image.coverage" NAME="Image Coverage Results" MODIFIED="1740246202057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/PIL" />
+    <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1740275339102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$tmp.coverage" NAME="tmp Coverage Results" MODIFIED="1740247614277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$text_overlay.coverage" NAME="text_overlay Coverage Results" MODIFIED="1740261146856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$ai.coverage" NAME="ai Coverage Results" MODIFIED="1740246188868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ai" />
+    <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$voice_output2.coverage" NAME="voice_output2 Coverage Results" MODIFIED="1740258638244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$screenshot.coverage" NAME="screenshot Coverage Results" MODIFIED="1740248494447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/Hackathon_UniversityOfSussex2025$voice_output.coverage" NAME="voice_output Coverage Results" MODIFIED="1740240286749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+>>>>>>> 279b897e01bfa74855571e8014b9f58a9157b3b7
   </component>
 </project>

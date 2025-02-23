@@ -83,12 +83,21 @@ def print_sentence_letter_by_letter(sentence, a, delay=0.08):
     time.sleep(delay)
     create_overlay("")
 
+def load_keybind():
+    try:
+        with open("keybind.txt", "r") as file:
+            return file.read().strip()
+    except FileNotFoundError:
+        return "k"
+
 def main() -> None:
     ai = AI()
     screen = ScreenShot()
     globals = Global()
     while True:
-        if keyboard.is_pressed("k"):
+
+        keybind = load_keybind()
+        if keyboard.is_pressed(keybind):
             print("Pressed")
             screen.take_screenshot()
             summary = query(ai)
