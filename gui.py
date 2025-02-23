@@ -22,6 +22,7 @@ class GUI(tk.Tk):
         }
         self.load_settings()
         self.binds_list = []
+        self.open = True
 
         scale = 0.0
         for desc, bind in self.settings_dict["binds"].items():
@@ -30,6 +31,7 @@ class GUI(tk.Tk):
                 self, text=desc, bg="white", command=lambda x=desc: self.change_bind(x)
             )
             bind_button.place(relx=0.2, rely=0.1+scale, anchor="center")
+            self.binds_list.append(bind_button)
 
         self.female_voice = tk.Button(
             self, command=lambda: self.change_voice("bIQlQ61Q7WgbyZAL7IWj")
@@ -38,6 +40,18 @@ class GUI(tk.Tk):
             self, command=lambda: self.change_voice("XjdmlV0OFXfXE6Mg2Sb7")
         )
 
+    def toggle(self):
+        if self.open:
+            for button in self.binds_list:
+                button.place_forget()
+            self.open = False
+        else:
+            scale = 0.0
+            for button in self.binds_list:
+                scale += 0.1
+                button.place(relx=0.2, rely=0.1 + scale, anchor="center")
+
+            self.open = True
 
     def change_voice(self, voice):
         self.settings_dict["voice"] = voice

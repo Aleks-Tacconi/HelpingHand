@@ -108,6 +108,12 @@ def main() -> None:
 
 
     while True:
+        if keyboard.is_pressed(","):
+            gui.toggle()
+            gui.update()
+            gui.update_idletasks()
+            time.sleep(1)
+
         if keyboard.is_pressed(gui.settings_dict["binds"]["Voice Record"]):
             speach = speak()
             print(speach)
