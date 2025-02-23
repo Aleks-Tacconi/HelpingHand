@@ -23,11 +23,9 @@ class GUI(tk.Tk):
         scale = 0.0
         for desc, bind in self.settings_dict["binds"].items():
             scale += 0.1
-            bind_info = tk.Label(self, text=desc)
             bind_button = tk.Button(
-                self, text=bind, bg="white", command=lambda x=desc: self.change_bind(x)
+                self, text=desc, bg="white", command=lambda x=desc: self.change_bind(x)
             )
-            bind_info.place(relx=0.1, rely=0.1+scale, anchor="center")
             bind_button.place(relx=0.2, rely=0.1+scale, anchor="center")
 
         self.female_voice = tk.Button(
@@ -56,3 +54,4 @@ class GUI(tk.Tk):
     def change_bind(self, key):
         bind = keyboard.read_event()
         self.settings_dict["binds"][key] = bind
+        self.write_settings()
