@@ -7,7 +7,10 @@ import json
 class GUI(tk.Tk):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.attributes("-fullscreen", True, "-transparentcolor", self["bg"])
+        self.attributes("-fullscreen", True)
+        self.attributes("-transparentcolor", self["bg"])
+        self.attributes("-topmost", True)
+
         self.overrideredirect(True)
         self.settings_dict = {
             "binds": {
@@ -52,6 +55,8 @@ class GUI(tk.Tk):
             self.settings_dict = binds
 
     def change_bind(self, key):
+        print(1)
         bind = keyboard.read_event()
-        self.settings_dict["binds"][key] = bind
+        key_str = bind.name
+        self.settings_dict["binds"][key] = key_str
         self.write_settings()
