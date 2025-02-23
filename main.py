@@ -14,6 +14,7 @@ from utils.data import load_data
 from voice_output import generate_response_voice
 from voice_output2 import generate_response_voice2
 from text_overlay import create_overlay
+import ctypes
 
 IMAGE_PROMPT = """
 Given the image provided
@@ -24,15 +25,22 @@ Given the image provided
 """
 
 TEXT_PROMPT = """
-Given the following information summarize the most important content
-relevant to a user playing a game into a short paragraph:\n\n
+Given the following information present the most important information for a new player in maximum 30 words. Also,
+prioritise recipies that can be made from the block if applicable.\n\n
 """
 
 TITLES = read_titles()
 
+class Global:
+    def __init__(self):
+        self.start = False
+
+
+
+
 
 def query(ai: AI) -> str | None:
-    # response = ai.image_prompt(IMAGE_PROMPT)
+    #response = ai.image_prompt(IMAGE_PROMPT)
     response = "Red Sand"
 
     if response is None:
@@ -48,25 +56,32 @@ def query(ai: AI) -> str | None:
     return summary
 
 
-def print_sentence_letter_by_letter(sentence, delay=0.1):
+def print_sentence_letter_by_letter(sentence, a, delay=0.08):
+    while not a.start:
+        continue
     for letter in sentence:
         print(letter, end="", flush=True)
+
         time.sleep(delay)
     print()
+    a.start = False
 
 
 def main() -> None:
     ai = AI()
     screen = ScreenShot()
+    globals = Global()
     while True:
         if keyboard.is_pressed("k"):
+            print("Pressed")
             screen.take_screenshot()
             summary = query(ai)
 
             if summary != "Error":
-                generate_response_voice2(summary)
-                create_overlay(summary, font_size=12, x=100, y=100)
+                threading.Thread(target=generate_response_voice2, args=(summary, globals)).start()
+                print_sentence_letter_by_letter(summary, globals)
 
+                #create_overlay(summary, font_size=12, x=100, y=100)
 
 if __name__ == "__main__":
     main()
