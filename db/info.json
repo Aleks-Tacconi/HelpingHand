@@ -1,0 +1,73 @@
+{
+    "red-sand": [
+        "Below is a table of the tools that can be used to break Red Sand blocks, and the speed it will take to break at (in seconds). This is calculated with the formula (1.5 * Block Hardness) / Tool Multiplier.",
+        "Red sand is very similar to regular sand. The only differences between red sand and regular sand are the textures, and red sand's inability to be used to craft concrete.",
+        [
+            {
+                "null": null,
+                "Tool": "Golden Shovel",
+                "Speed": "0.06s"
+            },
+            {
+                "null": null,
+                "Tool": "Diamond Shovel",
+                "Speed": "0.09s"
+            },
+            {
+                "null": null,
+                "Tool": "Iron Shovel",
+                "Speed": "0.12s"
+            },
+            {
+                "null": null,
+                "Tool": "Stone Shovel",
+                "Speed": "0.19s"
+            },
+            {
+                "null": null,
+                "Tool": "Wooden Shovel",
+                "Speed": "0.38s"
+            },
+            {
+                "null": null,
+                "Tool": "Netherite Shovel",
+                "Speed": "0.75s"
+            }
+        ],
+        [
+            {
+                "Item ID": "minecraft:red_sand"
+            },
+            {
+                "Legacy Item ID (1.12.2 and Below)": "minecraft:sand"
+            },
+            {
+                "Numerical ID": "12:1"
+            },
+            {
+                "Stackable": "Yes"
+            },
+            {
+                "Max Stack Size": "64"
+            },
+            {
+                "Recipes Used In": [
+                    "TNT",
+                    "Red Sandstone"
+                ]
+            },
+            {
+                "Hardness": "0.5"
+            },
+            {
+                "Material": "Dirt"
+            },
+            {
+                "Diggable": "Yes"
+            },
+            {
+                "Min / Max State IDs": "67 - 67"
+            }
+        ]
+    ]
+}

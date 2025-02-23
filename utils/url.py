@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 
 HEADINGS = ["h1", "h2", "h3", "h4", "h5", "h6"]
-OUTPUT_PATH = os.path.join("db", "info.txt")
+OUTPUT_PATH = os.path.join("db", "info.json")
 
 
 def get_wiki_url(block_name: str) -> str:
