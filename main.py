@@ -16,21 +16,22 @@ from text_overlay import create_overlay
 from utils import load_data
 from text_overlay import root
 
+
+
 IMAGE_PROMPT = """
 Given the image provided
-
-- identify the most central item in the image
-- reply only with the name of the item
-- ignore all other details or description
+- It is an image from minecraft
+- Identify and describe the item the center of the image
+- include type and as much visual details as possible
 """
 
 TEXT_PROMPT = """
 Given the following information in a coherent way for a new player in maximum 30 words.
 Give information in this order of importance if applicable (Give in sentence format like as a casual conversation): 
 - Name of item
-- Possible Crafting Recipes
-- If breaking/acquiring the block requires special methods/tools
-- Any else important is last in priority
+- The Crafting Recipe if applicable
+- What recommended tool/method is used to acquire this item
+- Special facts
 \n\n
 """
 
@@ -40,9 +41,11 @@ class Global:
     def __init__(self):
         self.start = False
 def query(ai: AI) -> str | None:
-
+    create_overlay("Processing...")
     response = ai.image_prompt(IMAGE_PROMPT)
+    response = ai.text_prompt("Identify what Minecraft item the following text is about, reply with only the name of the item:\n" + response)
     #response = "Red Sand"
+    print(response)
 
     if response is None:
         return "Error"
@@ -59,7 +62,7 @@ def query(ai: AI) -> str | None:
     return summary
 
 
-def print_sentence_letter_by_letter(sentence, a, delay=0.08):
+def print_sentence_letter_by_letter(sentence, a, delay=0.07):
     while not a.start:
         continue
 
@@ -99,7 +102,7 @@ def main() -> None:
 
         keybind = load_keybind()
         if keyboard.is_pressed(keybind):
-            print("Pressed")
+            print("Processing...")
             screen.take_screenshot()
             summary = query(ai)
 

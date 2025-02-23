@@ -61585,7 +61585,7 @@
                 "Item ID": "minecraft:amethyst_block"
             },
             {
-                "Stackable": "No"
+                "Stackable": "Yes"
             }
         ]
     ],

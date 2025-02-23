@@ -17,7 +17,7 @@ class AI:
     def image_prompt(self, prompt: str) -> str | None:
         image = self.__encode_image()
         response = self.__model.chat.completions.create(
-            model="gpt-4o-mini-2024-07-18",
+            model="gpt-4o",
             messages=[
                 {
                     "role": "user",
@@ -37,7 +37,7 @@ class AI:
 
     def text_prompt(self, prompt: str) -> str | None:
         response = self.__model.chat.completions.create(
-            model="gpt-4o-mini-2024-07-18",
+            model="gpt-4o",
             messages=[
                 {
                     "role": "user",
