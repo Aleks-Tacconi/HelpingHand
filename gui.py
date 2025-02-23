@@ -10,7 +10,7 @@ class GUI(tk.Tk):
         self.attributes("-fullscreen", True)
         self.config(bg="black")
         self.settings_dict = {
-            "binds": {"Full Screenshot": "[", "Area Screenshot": "]"},
+            "binds": {"Full Screenshot": "[", "Area Screenshot": "p", "Voice Record": "v"},
             "voice": "TOBETOKEN",  # TOKEN TO BE PLACED
         }
         self.load_settings()
@@ -22,8 +22,9 @@ class GUI(tk.Tk):
                 self, text=bind, bg="white", command=lambda x = desc: self.change_bind(x)
             )
 
-        self.female_voice = tk.Button(self, command=lambda: self.change_voice("token"))
-        self.male_voice = tk.Button(self, command=lambda: self.change_voice("token1"))
+        self.female_voice = tk.Button(self, command=lambda: self.change_voice("bIQlQ61Q7WgbyZAL7IWj"))
+        self.male_voice = tk.Button(self, command=lambda: self.change_voice("XjdmlV0OFXfXE6Mg2Sb7"))
+        self.withdraw()
 
     def change_voice(self, voice):
         self.settings_dict["voice"] = voice

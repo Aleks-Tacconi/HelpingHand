@@ -14,6 +14,7 @@ from voice_output2 import generate_response_voice2
 from text_overlay import create_overlay
 from utils import load_data
 from text_overlay import root
+from speak import speak
 
 
 IMAGE_PROMPT = """
@@ -103,7 +104,16 @@ def main() -> None:
     screen = ScreenShot()
     everything = Global()
     gui = g.GUI()
+
+
+
     while True:
+        if keyboard.is_pressed(gui.settings_dict["binds"]["Voice Record"]):
+            speach = speak()
+            print(speach)
+            response = ai.text_prompt(speach + "\n\n" + "Give me a simple but concise answer with relevant information, max 30 words.")
+            threading.Thread(target=generate_response_voice2, args=(response, everything)).start()
+            print_sentence_letter_by_letter(response, everything)
 
         if keyboard.is_pressed(gui.settings_dict["binds"]["Full Screenshot"]):
             print("Processing...")
@@ -112,6 +122,7 @@ def main() -> None:
 
         if keyboard.is_pressed(gui.settings_dict["binds"]["Area Screenshot"]):
             print("Processing...")
+            create_overlay("Select the region to capture by dragging your mouse.")
             screen.capture_region()
             check(ai, everything)
 
