@@ -1,6 +1,7 @@
 from PyQt6 import QtWidgets, QtGui
 from PyQt6.QtWidgets import QPushButton, QVBoxLayout, QWidget, QDialog, QLineEdit, QLabel, QFormLayout, QDialogButtonBox
 
+
 class KeybindDialog(QDialog):
     def __init__(self):
         super().__init__()
@@ -32,6 +33,7 @@ class KeybindDialog(QDialog):
             file.write(self.keybind)
         super().accept()
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -52,6 +54,11 @@ class Ui_MainWindow(object):
         self.keybindMenu.setFixedSize(200, 100)
         self.layout.addWidget(self.keybindMenu)
 
+        # Create the default settings button
+        self.defaultMenu = QPushButton("Default Settings")
+        self.defaultMenu.setFixedSize(200, 100)
+        self.layout.addWidget(self.defaultMenu)
+
         self.centralwidget.setLayout(self.layout)
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -64,12 +71,23 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.ui.keybindMenu.clicked.connect(self.open_keybind_dialog)
         self.current_keybind = "k"
+        self.ui.defaultMenu.clicked.connect(self.open_default)
 
     def open_keybind_dialog(self):
         dialog = KeybindDialog()
         if dialog.exec():
             self.current_keybind = dialog.keybind
             print(dialog.keybind)
+
+    def open_default(self):
+        # Reset the keybind to default 'k'
+        self.current_keybind = "k"
+
+        # Save the default keybind to the file
+        with open("keybind.txt", "w") as file:
+            file.write("k")
+
+        print("Keybind reset to default (k)")
 
 
 app = QtWidgets.QApplication([])

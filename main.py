@@ -54,11 +54,21 @@ def print_sentence_letter_by_letter(sentence, delay=0.1):
         time.sleep(delay)
     print()
 
+def load_keybind():
+    # Load the keybind from the keybind.txt file
+    try:
+        with open("keybind.txt", "r") as file:
+            return file.read().strip()
+    except FileNotFoundError:
+        # Default keybind if the file doesn't exist
+        return "k"
+
 def main() -> None:
     ai = AI()
     screen = ScreenShot()
+    keybind = load_keybind()  # Load the keybind from the file
     while True:
-        if keyboard.is_pressed("k"):
+        if keyboard.is_pressed(keybind):  # Use the keybind loaded from the file
             screen.take_screenshot()
             summary = query(ai)
 
