@@ -43,6 +43,3 @@ class GUI(tk.Tk):
     def change_bind(self, key):
         bind = keyboard.read_event()
         self.settings_dict["binds"][key] = bind
-
-if __name__ == "__main__":
-    a = GUI()

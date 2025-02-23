@@ -10,13 +10,14 @@ def text_similarity(text1: str, text2: str) -> float:
 
     return cosine_sim[0][0]
 
+
 def find_closest_match(word: str, words: list) -> str:
     closest = float("-inf")
     closest_word = ""
 
     for w in words:
         score = text_similarity(w, word)
-        
+
         if score > closest:
             closest = score
             closest_word = w

@@ -2,10 +2,9 @@ import os
 import time
 import keyboard
 
+import gui as g
 from ai import AI
 import threading
-from utils import get_wiki_url
-from utils import scrape_url
 from utils import read_file
 from utils import read_titles
 from utils import ScreenShot
@@ -15,7 +14,6 @@ from voice_output2 import generate_response_voice2
 from text_overlay import create_overlay
 from utils import load_data
 from text_overlay import root
-
 
 
 IMAGE_PROMPT = """
@@ -37,14 +35,20 @@ Give information in this order of importance if applicable (Give in sentence for
 
 TITLES = read_titles()
 
+
 class Global:
     def __init__(self):
         self.start = False
+
+
 def query(ai: AI) -> str | None:
     create_overlay("Processing...")
     response = ai.image_prompt(IMAGE_PROMPT)
-    response = ai.text_prompt("Identify what Minecraft item the following text is about, reply with only the name of the item:\n" + response)
-    #response = "Red Sand"
+    response = ai.text_prompt(
+        "Identify what Minecraft item the following text is about, reply with only the name of the item:\n"
+        + response
+    )
+    # response = "Red Sand"
     print(response)
 
     if response is None:
@@ -53,8 +57,6 @@ def query(ai: AI) -> str | None:
     title = find_closest_match(response, TITLES)
     load_data(title.lower())
     print(title)
-
-
 
     info = read_file(os.path.join("db", "info.json"))
     summary = ai.text_prompt(TEXT_PROMPT + info)
@@ -79,7 +81,6 @@ def print_sentence_letter_by_letter(sentence, a, delay=0.07):
         if len(words) == 7:
             words = []
 
-
         time.sleep(delay)
 
     print()
@@ -87,32 +88,38 @@ def print_sentence_letter_by_letter(sentence, a, delay=0.07):
     time.sleep(delay)
     create_overlay("")
 
-def load_keybind():
-    try:
-        with open("keybind.txt", "r") as file:
-            return file.read().strip()
-    except FileNotFoundError:
-        return "k"
+
+def check(ai, everything):
+    summary = query(ai)
+    if summary != "Error":
+        threading.Thread(
+            target=generate_response_voice2, args=(summary, everything)
+        ).start()
+        print_sentence_letter_by_letter(summary, everything)
+        # create_overlay(summary, font_size=12, x=100, y=100)
 
 def main() -> None:
     ai = AI()
     screen = ScreenShot()
-    globals = Global()
+    everything = Global()
+    gui = g.GUI()
     while True:
 
-        keybind = load_keybind()
-        if keyboard.is_pressed("k"):
+        if keyboard.is_pressed(gui.settings_dict["binds"]["Full Screenshot"]):
             print("Processing...")
             screen.take_screenshot()
-            summary = query(ai)
+            check(ai, everything)
 
-            if summary != "Error":
-                threading.Thread(target=generate_response_voice2, args=(summary, globals)).start()
-                print_sentence_letter_by_letter(summary, globals)
-                #create_overlay(summary, font_size=12, x=100, y=100)
+        if keyboard.is_pressed(gui.settings_dict["binds"]["Area Screenshot"]):
+            print("Processing...")
+            screen.capture_region()
+            check(ai, everything)
+
+
 
         root.update()
         root.update_idletasks()
+
 
 if __name__ == "__main__":
     main()
