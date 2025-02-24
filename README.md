@@ -57,10 +57,10 @@ Follow these steps to set up and run the project:
     ```
 
 ## Team Members
-- **Aleksander Tacconi** - [GitHub](https://github.com/Aleks-Tacconi)
-- **Daniel Cocos** - [GitHub](https://github.com/Daniel-Cocos)
-- **Christopher White** - [GitHub](https://github.com/christopherwhite06)
-- **Benjamin Millward** - [GitHub](https://github.com/GamanMil)
+<a href="https://github.com/Aleks-Tacconi">![GitHub](https://img.shields.io/badge/GitHub-Aleksander_Tacconi-blue?logo=github&logoColor=white&style=for-the-badge)</a><br>
+<a href="https://github.com/Daniel-Cocos">![GitHub](https://img.shields.io/badge/GitHub-Daniel_Cocos-blue?logo=github&logoColor=white&style=for-the-badge)</a><br>
+<a href="https://github.com/christopherwhite06">![GitHub](https://img.shields.io/badge/GitHub-Christopher_White-blue?logo=github&logoColor=white&style=for-the-badge)</a><br>
+<a href="https://github.com/GamanMil">![GitHub](https://img.shields.io/badge/GitHub-Benjamin_Millward-blue?logo=github&logoColor=white&style=for-the-badge)</a>
 
 ## Devpost Submission
 For more details and contributions, visit our [Devpost project page](https://devpost.com/software/helping-hand-dx4b9m).
