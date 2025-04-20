@@ -1,8 +1,6 @@
 # Helping Hand
 ## Submission to the HackSussex 2025 Hackathon 
 
-![Project Image](Assets/image.jpg)
-
 ## About
 AI screen analysis software engineered specifically to help disabled and less experienced players get the most out of their time playing games
 
